@@ -1,0 +1,268 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+/******************************************
+  /* BASE STYLES
+  /*******************************************/
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+/******************************************
+  /* LAYOUT
+  /*******************************************/
+header {
+  padding: 20px 0;
+  height: 100px;
+}
+.logo {
+  text-decoration: none;
+  font-size: 50px;
+  color: #1f1f1f;
+  font-family: "Dancing Script", cursive;
+  display: inline-block;
+}
+.logo:hover {
+  color: #8338ec;
+}
+nav {
+  display: flex;
+}
+nav ul {
+  list-style: none;
+}
+nav ul li a {
+  text-decoration: none;
+  font-weight: 100;
+  color: #1f1f1f;
+  font-size: 18px;
+  text-transform: uppercase;
+  float: left;
+  margin-right: 20px;
+  margin-top: 20px;
+  position: relative;
+}
+nav ul li a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: #8338ec;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+}
+nav ul li a:hover {
+  font-weight: 700;
+  color: #21242a;
+  transition: all ease-in-out 0.5s;
+}
+nav ul li a:hover::after {
+  width: 100%;
+  transition: all ease-in-out 0.5s;
+}
+footer {
+  background-color: #21242a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  color: #fff;
+}
+footer a {
+  text-decoration: none;
+  color: #fff;
+}
+/******************************************
+  /* ADDITIONAL STYLES
+  /*******************************************/
+
+/******************************************
+  /* ABOUT SECTION
+  /*******************************************/
+#about {
+  background-color: #21242a;
+}
+#about h1 {
+  font-size: 90px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+.about__info {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 40%;
+}
+.about__info p {
+  font-size: 30px;
+  margin-bottom: 80px;
+}
+#about a {
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 50px;
+  text-transform: uppercase;
+}
+.about__book-btn {
+  color: #fff;
+  padding: 20px 40px;
+  background-color: #1f1f1f;
+}
+.about__book-btn:hover {
+  color: #1f1f1f;
+  background-color: #fff;
+  transition: all ease-in-out 0.7s;
+}
+.about__find-btn {
+  color: #1f1f1f;
+  padding: 20px 40px;
+  background-color: #fff;
+}
+.about__find-btn:hover {
+  color: #fff;
+  background-color: #1f1f1f;
+  transition: all ease-in-out 0.5s;
+}
+.about__model-one {
+  height: 100vh;
+}
+
+/******************************************
+  /* SERVICE SECTION
+  /*******************************************/
+#services {
+  margin: 100px 0;
+}
+.services__wrapper {
+  /* background-color: #21242a; */
+  margin: 40px auto;
+  color: #000;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.services__wrapper:hover {
+  background-color: #525c5f;
+  color: #fff;
+  transition: all ease-in-out 0.5s;
+}
+.services__wrapper img {
+  margin: 40px auto;
+  width: 60%;
+}
+.services__wrapper h3 {
+  margin-bottom: 20px;
+}
+.services__wrapper p {
+  line-height: 150%;
+  font-weight: 100;
+  padding: 0 40px;
+}
+.services__wrapper a {
+  text-decoration: none;
+  padding: 20px 40px;
+  background-color: #fff;
+  border: 1px solid;
+  border-radius: 10px;
+  color: #21242a;
+  margin: 30px auto;
+}
+.services__wrapper a:hover {
+  background-color: #1f1f1f;
+  color: #fff;
+  transition: all ease-in-out 0.5s;
+}
+
+/******************************************
+  /* LOOKBOOK SECTION
+  /*******************************************/
+#lookbook {
+  background-color: #21242a;
+  margin: 100px 0;
+}
+#lookbook h2 {
+  padding: 100px 0;
+  color: #fff;
+  font-size: 60px;
+  text-align: center;
+  text-transform: uppercase;
+}
+#lookbook img {
+  width: 100%;
+}
+#lookbook .col-md-4 {
+  cursor: pointer;
+  padding: 0;
+}
+
+/******************************************
+  /* CONTACT SECTION
+  /*******************************************/
+#contact {
+  margin: 100px 0 50px 0;
+}
+#contact img {
+  width: 100%;
+}
+#contact h2 {
+  font-size: 50px;
+  margin-bottom: 40px;
+}
+#contact h3 {
+  margin-top: 40px;
+}
+#contact span {
+  font-family: "Dancing Script", cursive;
+  font-size: 60px;
+}
+#contact p {
+  line-height: 150%;
+  font-size: 18px;
+}
+form input,
+form textarea {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background-color: #21242a;
+  padding: 15px;
+  margin: 15px 0;
+  color: #efefef;
+  font-size: 18px;
+  border-radius: 6px;
+}
+form .contact__btn {
+  padding: 20px 40px;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: #1f1f1f;
+  color: #fff;
+  text-transform: uppercase;
+}
+form .contact__btn:hover {
+  background-color: #fff;
+  color: #1f1f1f;
+}
