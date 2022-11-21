@@ -81,15 +81,19 @@ nav ul li a:hover::after {
 }
 footer {
   background-color: #21242a;
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
+  text-align: center;
   padding: 20px 0;
   color: #fff;
 }
 footer a {
   text-decoration: none;
   color: #fff;
+}
+footer p {
+  display: block;
 }
 /******************************************
   /* ADDITIONAL STYLES
@@ -164,8 +168,7 @@ footer a {
   text-align: center;
 }
 .services__wrapper:hover {
-  background-color: #525c5f;
-  color: #fff;
+  background-color: rgb(237, 236, 236);
   transition: all ease-in-out 0.5s;
 }
 .services__wrapper img {
@@ -216,6 +219,10 @@ footer a {
   cursor: pointer;
   padding: 0;
 }
+#lookbook .col-md-3 {
+  cursor: pointer;
+  padding: 0;
+}
 
 /******************************************
   /* CONTACT SECTION
@@ -225,6 +232,11 @@ footer a {
 }
 #contact img {
   width: 100%;
+}
+#contact__socials {
+  display: flex;
+  margin-top: 20px;
+  gap: 20px;
 }
 #contact h2 {
   font-size: 50px;
@@ -241,6 +253,7 @@ footer a {
   line-height: 150%;
   font-size: 18px;
 }
+
 form input,
 form textarea {
   width: 100%;
